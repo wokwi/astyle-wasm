@@ -1,0 +1,37 @@
+{
+  "name": "astyle",
+  "version": "1.0.0",
+  "description": "AStyle Web Assembly Build",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "dist/libastyle.js",
+    "dist/libastyle.wasm"
+  ],
+  "scripts": {
+    "build:image": "docker build -t astyle-wasm .",
+    "build:copy": "node copybin.js",
+    "test": "jest",
+    "prepublish": "npm run build:image && npm run build:copy",
+    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by NGCC. This is not allowed.\\nPlease delete and rebuild the package, without compiling with NGCC, before attempting to publish.\\nNote that NGCC may have been run by importing this package into another project that is being built with Ivy enabled.\\n')\" && exit 1"
+  },
+  "repository": "https://github.com/wokwi/astyle-wasm",
+  "keywords": [
+    "web assembly",
+    "wasm",
+    "astyle",
+    "code formatting",
+    "c++ formatter"
+  ],
+  "author": "Uri Shaked",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wokwi/astyle-wasm/issues"
+  },
+  "homepage": "https://github.com/wokwi/astyle-wasm#readme",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
