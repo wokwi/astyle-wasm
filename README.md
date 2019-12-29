@@ -2,6 +2,8 @@
 
 Artistic Style (AStyle) compiled for Web Assembly
 
+[![Build Status](https://github.com/wokwi/astyle-wasm/workflows/Node%20CI/badge.svg)](https://github.com/wokwi/astyle-wasm/actions)
+
 ## Usage Example
 
 ```javascript
