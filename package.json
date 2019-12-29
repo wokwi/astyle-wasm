@@ -11,11 +11,11 @@
     "dist/libastyle.wasm"
   ],
   "scripts": {
-    "build:image": "docker build -t astyle-wasm .",
+    "build": "npm run build:image && npm run build:copy",
     "build:copy": "node copybin.js",
+    "build:image": "docker build -t astyle-wasm .",
     "test": "jest",
-    "prepublish": "npm run build:image && npm run build:copy",
-    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by NGCC. This is not allowed.\\nPlease delete and rebuild the package, without compiling with NGCC, before attempting to publish.\\nNote that NGCC may have been run by importing this package into another project that is being built with Ivy enabled.\\n')\" && exit 1"
+    "prepublishOnly": "npm run build"
   },
   "repository": "https://github.com/wokwi/astyle-wasm",
   "keywords": [
