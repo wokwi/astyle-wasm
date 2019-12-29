@@ -1,1 +1,4 @@
+dist/*.a
+dist/*.js
+dist/*.wasm
 node_modules

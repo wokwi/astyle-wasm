@@ -1,6 +1,6 @@
 {
   "name": "astyle",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Artistic Style (AStyle) built with Web Assembly",
   "main": "index.js",
   "types": "index.d.ts",
