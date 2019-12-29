@@ -7,7 +7,7 @@ const dir = spawn('docker', [
   'astyle-wasm',
   'bash',
   '-c',
-  'rm /mnt/dist/* && cp bin/* /mnt/dist'
+  'rm -f /mnt/dist/* && cp bin/* /mnt/dist'
 ]);
 
 dir.stdout.pipe(process.stdout);
