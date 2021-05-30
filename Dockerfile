@@ -1,10 +1,10 @@
 # Artistic Style (AStyle) + Emscripten build environment
-# Copyright (C) 2020, Uri Shaked. Published under the MIT license.
+# Copyright (C) 2020, 2021, Uri Shaked. Published under the MIT license.
 
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 
 RUN apt-get update
-RUN apt-get install -y wget python git cmake xz-utils lsb-release sudo
+RUN DEBIAN_FRONTEND="noninteractive" apt-get install -y wget python git cmake xz-utils lsb-release sudo
 
 ## Install EMScripten SDK
 
