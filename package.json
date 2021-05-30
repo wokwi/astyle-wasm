@@ -32,6 +32,6 @@
   },
   "homepage": "https://github.com/wokwi/astyle-wasm#readme",
   "devDependencies": {
-    "jest": "^24.9.0"
+    "jest": "^27.0.3"
   }
 }
