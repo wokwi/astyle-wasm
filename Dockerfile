@@ -14,8 +14,8 @@ RUN git clone https://github.com/emscripten-core/emsdk.git
 
 WORKDIR /opt/emsdk
 
-RUN ./emsdk install latest
-RUN ./emsdk activate latest
+RUN ./emsdk install 1.40.1
+RUN ./emsdk activate 1.40.1
 
 RUN echo "source $(pwd)/emsdk_env.sh" >> ~/.bashrc
 
